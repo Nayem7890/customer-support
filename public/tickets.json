@@ -1,0 +1,110 @@
+[
+  {
+    "id": "#1001",
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but the system reports an 'Invalid Credentials' error. Urgent support needed.",
+    "customer": "John Smith",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "1/15/2024"
+  },
+  {
+    "id": "#1002",
+    "title": "Feature Request: Export Data to CSV",
+    "description": "The user is requesting a new feature to export their ticket history and data into a CSV format for external analysis and reporting.",
+    "customer": "Sarah Lee",
+    "priority": "LOW PRIORITY",
+    "status": "New",
+    "createdAt": "1/16/2024"
+  },
+  {
+    "id": "#1003",
+    "title": "Bug: Incorrect Calculation on Dashboard",
+    "description": "A calculation error is occurring on the main dashboard widget. The 'Resolved Tickets' count is displaying a negative number, which is impossible.",
+    "customer": "Tech Team",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In Progress",
+    "createdAt": "1/16/2024"
+  },
+  {
+    "id": "#1004",
+    "title": "Billing Inquiry - Duplicate Charge",
+    "description": "Customer noticed they were charged twice for their monthly subscription fee. They have provided bank statements as proof and request a refund for the duplicate charge immediately.",
+    "customer": "Alice Johnson",
+    "priority": "HIGH PRIORITY",
+    "status": "Pending Customer Reply",
+    "createdAt": "1/17/2024"
+  },
+  {
+    "id": "#1005",
+    "title": "Documentation Update Request",
+    "description": "The 'How-to-Setup' guide in the Knowledge Base is outdated. Screenshots and steps for the latest V3 update need to be replaced and revised.",
+    "customer": "Mark Brown",
+    "priority": "LOW PRIORITY",
+    "status": "Resolved",
+    "createdAt": "1/17/2024"
+  },
+  {
+    "id": "#1006",
+    "title": "Email Notifications Not Working",
+    "description": "Users are not receiving email notifications for status updates on their existing tickets. Confirmed server-side logging shows no outbound email attempts.",
+    "customer": "System Admin",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "1/18/2024"
+  },
+  {
+    "id": "#1007",
+    "title": "Interface Lag on Mobile Device",
+    "description": "When accessing the portal on a Samsung Galaxy S23, the interface experiences significant lag, especially when scrolling through long ticket lists.",
+    "customer": "David Clark",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In Progress",
+    "createdAt": "1/18/2024"
+  },
+  {
+    "id": "#1008",
+    "title": "Request for Password Policy Change",
+    "description": "The current password policy is too strict (requires 15 characters, special characters, and numbers). Requesting a more flexible policy for user convenience.",
+    "customer": "Emily White",
+    "priority": "LOW PRIORITY",
+    "status": "New",
+    "createdAt": "1/19/2024"
+  },
+  {
+    "id": "#1009",
+    "title": "Missing Ticket Attachments",
+    "description": "All attachments uploaded to ticket #1002 this morning have disappeared. The files were a PDF and a PNG image.",
+    "customer": "Sarah Lee",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "1/19/2024"
+  },
+  {
+    "id": "#1010",
+    "title": "Account Deactivation Request",
+    "description": "Customer no longer requires access to the system and has requested their account be permanently deactivated and all associated data purged.",
+    "customer": "James Wilson",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Resolved",
+    "createdAt": "1/20/2024"
+  },
+  {
+    "id": "#1011",
+    "title": "UI Feedback: Confusing Button Placement",
+    "description": "The 'Close Ticket' and 'Archive' buttons are placed too close together, leading to frequent accidental closures. Suggest moving 'Archive' to a dropdown menu.",
+    "customer": "Laura Miller",
+    "priority": "LOW PRIORITY",
+    "status": "New",
+    "createdAt": "1/20/2024"
+  },
+  {
+    "id": "#1012",
+    "title": "Database Connection Interruption",
+    "description": "The system experienced a brief (3-minute) outage at 2:30 AM UTC due to a failure in the primary database connection. Need a root cause analysis report.",
+    "customer": "Operations Team",
+    "priority": "HIGH PRIORITY",
+    "status": "In Progress",
+    "createdAt": "1/21/2024"
+  }
+]
