@@ -1,27 +1,40 @@
 
+import { Suspense } from 'react'
 import './App.css'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
+import IssueManagement from './components/issueManagement/IssueManagement'
+import Hero from './components/Hero/Hero'
+
+              {/* API Fetch */}
+        const fetchIssues = async() => {
+         const result = await fetch("/tickets.json")
+         return result.json()
+        }
 
 function App() {
-  
+  const fetchPromise = fetchIssues();
 
   return (
     <>
       <Navbar></Navbar>
+      <Hero></Hero>
       
-      <div>
-        <div className='grid grid-cols-2 gap-8 my-12 max-w-11/12 mx-auto'>
-          <div className='rounded-md text-white h-[250px] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center gap-3.5'>
-            <h2 className='font-bold text-3xl'>In-Progress</h2>
-            <p className='font-semibold text-5xl'>0</p>
-          </div>
-          <div className='rounded-md text-white h-[250px] bg-gradient-to-r from-[#54CF68] to-[#00827A] flex flex-col justify-center items-center'>
-            <h2 className='font-bold text-3xl'>Resolved</h2>
-            <p className='font-semibold text-5xl'>0</p>
-          </div>
+          
+      <div className='grid grid-cols-12 max-w-11/12 mx-auto gap-6 my-16'>
+        <div className='col-span-8'>
+           <h2 className='text-3xl font-bold'>Customer Tickets</h2>
+           <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+        <IssueManagement fetchPromise={fetchPromise}></IssueManagement>
+      </Suspense>
+      
+        </div>
+
+        <div className='col-span-4'>
+           <h1 className='text-3xl font-bold'>Report Section</h1>
         </div>
       </div>
+      
 
       <Footer></Footer>
     </>

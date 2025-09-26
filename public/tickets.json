@@ -14,7 +14,7 @@
     "description": "The user is requesting a new feature to export their ticket history and data into a CSV format for external analysis and reporting.",
     "customer": "Sarah Lee",
     "priority": "LOW PRIORITY",
-    "status": "New",
+    "status": "Open",
     "createdAt": "1/16/2024"
   },
   {
@@ -32,7 +32,7 @@
     "description": "Customer noticed they were charged twice for their monthly subscription fee. They have provided bank statements as proof and request a refund for the duplicate charge immediately.",
     "customer": "Alice Johnson",
     "priority": "HIGH PRIORITY",
-    "status": "Pending Customer Reply",
+    "status": "Open",
     "createdAt": "1/17/2024"
   },
   {
@@ -41,7 +41,7 @@
     "description": "The 'How-to-Setup' guide in the Knowledge Base is outdated. Screenshots and steps for the latest V3 update need to be replaced and revised.",
     "customer": "Mark Brown",
     "priority": "LOW PRIORITY",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "1/17/2024"
   },
   {
@@ -68,7 +68,7 @@
     "description": "The current password policy is too strict (requires 15 characters, special characters, and numbers). Requesting a more flexible policy for user convenience.",
     "customer": "Emily White",
     "priority": "LOW PRIORITY",
-    "status": "New",
+    "status": "In Progress",
     "createdAt": "1/19/2024"
   },
   {
@@ -86,7 +86,7 @@
     "description": "Customer no longer requires access to the system and has requested their account be permanently deactivated and all associated data purged.",
     "customer": "James Wilson",
     "priority": "MEDIUM PRIORITY",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "1/20/2024"
   },
   {
@@ -95,7 +95,7 @@
     "description": "The 'Close Ticket' and 'Archive' buttons are placed too close together, leading to frequent accidental closures. Suggest moving 'Archive' to a dropdown menu.",
     "customer": "Laura Miller",
     "priority": "LOW PRIORITY",
-    "status": "New",
+    "status": "Open",
     "createdAt": "1/20/2024"
   },
   {
