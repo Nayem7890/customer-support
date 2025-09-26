@@ -12,27 +12,27 @@ const Footer = () => {
                     <h2 className='text-2xl'>CS — Ticket System</h2>
                     <p className='text-[#A1A1AA]'>CS — Ticket System is dedicated to providing swift and effective solutions for all your needs. This problem ticketing system is your direct line to our support team, allowing you to track the status of your issues, access our comprehensive knowledge base, and open new requests with ease.</p>
                 </div>
-                <div className='flex-1 space-y-3'>
+                <div className='flex-1 space-y-3 cursor-pointer'>
                     <h2 className='text-xl'>Company</h2>
                     <p className='text-[#A1A1AA]'>About Us</p>
                     <p className='text-[#A1A1AA]'>Our Mission</p>
                     <p className='text-[#A1A1AA]'>Contact Saled</p>
                 </div>
 
-                <div className='flex-1 space-y-3'>
+                <div className='flex-1 space-y-3 cursor-pointer'>
                     <h2 className='text-xl'>Services</h2>
                     <p className='text-[#A1A1AA]'>Products & Services</p>
                     <p className='text-[#A1A1AA]'>Customer Stories</p>
                     <p className='text-[#A1A1AA]'>Download Apps</p>
                 </div>
 
-                <div className='flex-1 space-y-3'>
+                <div className='flex-1 space-y-3 cursor-pointer'>
                     <h2 className='text-xl'>Information</h2>
                     <p className='text-[#A1A1AA]'>Privacy Policy</p>
                     <p className='text-[#A1A1AA]'>Terms & Conditions</p>
                     <p className='text-[#A1A1AA]'>Join Us</p>
                 </div>
-                <div className='flex-1 space-y-3'>
+                <div className='flex-1 space-y-3 cursor-pointer'>
                     <h2 className='text-xl'>Social Links</h2>
                     <p className='flex text-[#A1A1AA]'><img src={twitterImg} alt="" /> @CS — Ticket System</p>
                     <p className='flex text-[#A1A1AA]'><img src={linkedinImg} alt="" /> @CS — Ticket System</p>

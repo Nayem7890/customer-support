@@ -10,7 +10,7 @@ const Navbar = () => {
     <a className="btn btn-ghost text-xl">CS — Ticket System</a>
   </div>
   <div className="navbar-end hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 cursor-pointer">
       <li><a>Home</a></li>
       <li><a>FAQ</a></li>
       <li><a>Changelog</a></li>

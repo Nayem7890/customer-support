@@ -1,27 +1,34 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import calendarImg from '../../assets/ri_calendar-line.png'
-const IssueManagement = ({ fetchPromise }) => {
+const IssueManagement = ({ fetchPromise, onAddTask, resolvedTasks }) => {
     const issueData = use(fetchPromise)
-    // console.log(issueData)
+    const visibleIssues = issueData.filter(
+  issue => !resolvedTasks.find(r => r.id === issue.id)
+);
+    const [data, setData] = useState(issueData);
+    console.log(data)
+
+    
+
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 cursor-pointer'>
             {/* Card Section-Left */}
             {
-                issueData.map(issue => {
+                visibleIssues.map(issue => {
                     console.log(issue)
                     return (
                         <div>
                             <div>
-                                <div className='shadow-md p-4 rounded-md'>
+                                <div key={issue.id} onClick={() => onAddTask(issue)} className='shadow-md p-4 rounded-md'>
                                     <div className='flex justify-between items-center'>
-                                        <h2 className='font-bold text-[18px] '>{issue.title} </h2>
+                                        <h2 className='font-bold text-[18px]'>{issue.title} </h2>
                                         <h3 className={`font-semibold py-1 px-2 rounded-xl ${issue.status == "Open" ? "bg-[#B9F8CF] text-[#0B5E06]" : issue.status == "In Progress" ? "bg-[#F8F3B9] text-[#9C7700]" : "bg-[#E0E0E0] text-[#333]"}`
                                         }>{issue.status} </h3>
                                     </div>
                                     <p className='py-2 text-[#627382] '>{issue.description
                                         } </p>
 
-                                        <div className='flex justify-between items-center'>
+                                        <div className='flex flex-col md:flex-row justify-between items-center'>
                                             <div className='flex gap-4 items-center'>
                                                 <p className='text-[#627382]'>{issue.id} </p>
                                                 <p className={`font-semibold py-1 px-2 rounded-xl ${issue.priority == "LOW PRIORITY" ? "text-[#0B5E06]" : issue.priority == "MEDIUM PRIORITY" ? "text-[#FEBB0C]" : "text-[#F83044]"}`
