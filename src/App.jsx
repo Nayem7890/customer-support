@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import IssueManagement from './components/issueManagement/IssueManagement'
 import Hero from './components/Hero/Hero'
+import { ToastContainer, toast } from 'react-toastify';
 
 // API Fetch
 const fetchIssues = async () => {
@@ -23,16 +24,17 @@ function App() {
     
     if (!tasks.find(t => t.id === issue.id)) {
       setTasks([...tasks, issue]);
-      alert(`Task "${issue.title}" added to Task Status`);
+      toast(`Task "${issue.title}" added to Task Status`);
+      
     }
   };
-
+   
   const handleComplete = (id) => {
   const completedTask = tasks.find(task => task.id === id);
   if (completedTask) {
     setTasks(tasks.filter(task => task.id !== id));
     setResolvedTasks([...resolvedTasks, completedTask]);
-    alert(`Task "${completedTask.title}" marked as complete!`);
+    toast(`Task "${completedTask.title}" marked as complete!`);
   }
 };
 
@@ -97,10 +99,10 @@ function App() {
 
       </div>
 
-      
 
 
       <Footer></Footer>
+      <ToastContainer />
     </>
   )
 }
