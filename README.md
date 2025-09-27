@@ -1,16 +1,21 @@
-# React + Vite
+1. What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+=> JSX(Javascript XML) is syntax extension in which you can write HTML-like code directly into JavaScript.
 
-Currently, two official plugins are available:
+The reason is, it keeps component structure readable and you can directly extract values from props in an efficient way to create your React elements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. What is the difference between State and Props?
+=> State:-  Controlled within the component (private data). Can be changed (dynamic).
 
-## React Compiler
+Props: - Passed from outside (that is parent child). Are read-only (immutable).
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. What is the useState hook, and how does it work?
+=> A React hook that allows you to add state (a.k.a. dynamic data) to functional components.
 
-## Expanding the ESLint configuration
+It will return array: [currentStateValue, setstateFunction]. Invoking the setter function will set the given state and cause a React re-renering.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. How can you share state between components in React?
+=> The first technique is Lifting State Up: move state into the closest common ancestor and pass it down as props.
+
+5. How is event handling done in React?
+=> Handling events with the help of functions and updated state Event Handling in React can be done using functions passed down as props to JSX elements.

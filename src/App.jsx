@@ -44,7 +44,9 @@ function App() {
 
   return (
     <>
+    
       <Navbar></Navbar>
+      
       <Hero inProgressCount={tasks.length} resolvedCount={resolvedTasks.length} />
       
           
@@ -80,7 +82,7 @@ function App() {
 
 
           <div className="mt-6">
-  <h2 className="text-2xl font-bold mb-2">Resolved Tasks</h2>
+  <h2 className="text-3xl font-bold mb-4">Resolved Tasks</h2>
   {resolvedTasks.length === 0 ? (
     <p className="text-gray-500">No resolved tasks yet.</p>
   ) : (

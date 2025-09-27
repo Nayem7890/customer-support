@@ -6,7 +6,7 @@ const IssueManagement = ({ fetchPromise, onAddTask, resolvedTasks }) => {
   issue => !resolvedTasks.find(r => r.id === issue.id)
 );
     const [data, setData] = useState(issueData);
-    console.log(data)
+    console.log(data, setData)
 
     
 
