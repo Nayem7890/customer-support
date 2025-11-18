@@ -1,20 +1,66 @@
-import React from 'react';
+import React from 'react'
 
-const Hero = ({ inProgressCount, resolvedCount }) => {
-    return (
-        <div>
-            <div className='grid grid-cols-2 gap-8 my-12 max-w-11/12 mx-auto'>
-          <div className='rounded-md text-white h-[250px] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center gap-3.5'>
-            <h2 className='font-bold text-3xl'>In-Progress</h2>
-            <p className='font-semibold text-5xl'>{inProgressCount}</p>
-          </div>
-          <div className='rounded-md text-white h-[250px] bg-gradient-to-r from-[#54CF68] to-[#00827A] flex flex-col justify-center items-center'>
-            <h2 className='font-bold text-3xl'>Resolved</h2>
-            <p className='font-semibold text-5xl'>{resolvedCount}</p>
-          </div>
-        </div>
-        </div>
-    );
-};
+const Hero = ({
+  repoUrl,
+  inProgressCount,
+  resolvedCount,
+  stars,
+  forks,
+  issues,
+  lastUpdated,
+  isRepoLoading,
+}) => {
+  const formattedDate =
+    lastUpdated && !isRepoLoading
+      ? new Intl.DateTimeFormat('en', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        }).format(new Date(lastUpdated))
+      : '--'
 
-export default Hero;
+  const metricValue = value =>
+    isRepoLoading || value === null ? '--' : new Intl.NumberFormat().format(value)
+
+  const metrics = [
+    { label: 'In progress', value: inProgressCount },
+    { label: 'Resolved', value: resolvedCount },
+    { label: 'Stars', value: metricValue(stars) },
+    { label: 'Forks', value: metricValue(forks) },
+    { label: 'Open issues', value: metricValue(issues) },
+    { label: 'Last push', value: formattedDate },
+  ]
+
+  return (
+    <section className="hero-shell glass-panel">
+      <div className="hero-copy">
+        <p className="chip chip--primary">Customer support OS</p>
+        <h1>Keep every customer conversation on track</h1>
+        <p className="muted">
+          This workspace helps real teams watch the queue, prioritize urgent cases,
+          and celebrate resolved tickets. Plug in your own data source and give
+          stakeholders a live window into support health.
+        </p>
+        <div className="hero-actions">
+          <a className="btn primary-btn" href={repoUrl} target="_blank" rel="noreferrer">
+            Open on GitHub
+          </a>
+          <a className="btn ghost-btn" href="#tickets">
+            See ticket board
+          </a>
+        </div>
+      </div>
+
+      <div className="hero-metrics">
+        {metrics.map(metric => (
+          <div key={metric.label} className="hero-metric-card">
+            <p className="hero-metric-value">{metric.value}</p>
+            <p className="hero-metric-label">{metric.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default Hero

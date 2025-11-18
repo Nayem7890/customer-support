@@ -1,21 +1,60 @@
-1. What is JSX, and why is it used?
+# Customer Support Task Board
 
-=> JSX(Javascript XML) is syntax extension in which you can write HTML-like code directly into JavaScript.
+## 1. Overview
+Actionable customer support dashboard that visualizes ticket queues, tracks team workload, and surfaces GitHub repository metadata in a glassmorphism UI. Use it as a live demo, portfolio artifact, or internal helper to keep customer conversations on track.
 
-The reason is, it keeps component structure readable and you can directly extract values from props in an efficient way to create your React elements.
+## 📸 Screenshots
 
-2. What is the difference between State and Props?
-=> State:-  Controlled within the component (private data). Can be changed (dynamic).
+### 🏠 Home Page
+![Home Page Screenshot](https://raw.githubusercontent.com/Nayem7890/customer-support/main/public/customer-support.png)
 
-Props: - Passed from outside (that is parent child). Are read-only (immutable).
 
-3. What is the useState hook, and how does it work?
-=> A React hook that allows you to add state (a.k.a. dynamic data) to functional components.
+## 3. Core Technologies
+- React 19 with Suspense data loading
+- Vite 7 build toolchain
+- Tailwind CSS 4 + DaisyUI components
+- React Toastify for notifications
 
-It will return array: [currentStateValue, setstateFunction]. Invoking the setter function will set the given state and cause a React re-renering.
+## 4. Main Features
+- **Live repository pulse**: fetches stars, forks, and open issues straight from the GitHub API.
+- **Hero metrics**: highlights in-progress vs. resolved tickets so leads can report status instantly.
+- **Interactive triage board**: keyboard-accessible ticket cards that can be added to a personal task lane and resolved with a click.
+- **Operational context**: roadmap milestones, resolved ticket log, and feature highlights help stakeholders see what is shipping.
+- **CTA panel**: explains how to plug the dashboard into a real support workflow or share it with your team.
 
-4. How can you share state between components in React?
-=> The first technique is Lifting State Up: move state into the closest common ancestor and pass it down as props.
+## 5. Dependencies
+- `react`, `react-dom`
+- `vite`, `@vitejs/plugin-react`
+- `tailwindcss`, `@tailwindcss/vite`, `daisyui`
+- `react-toastify`
+- `eslint`, `@eslint/js`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`, `globals`
 
-5. How is event handling done in React?
-=> Handling events with the help of functions and updated state Event Handling in React can be done using functions passed down as props to JSX elements.
+## 6. Run Locally
+1. **Clone**  
+   `git clone https://github.com/Nayem7890/customer-support.git`
+2. **Install**  
+   `cd customer-support && npm install`
+3. **Configure (optional)**  
+   Create `.env` and set:
+   ```
+   VITE_GITHUB_OWNER=Nayem7890
+   VITE_GITHUB_REPO=customer-support
+   VITE_GITHUB_URL=https://github.com/Nayem7890/customer-support
+   ```
+4. **Develop**  
+   `npm run dev` then open the printed localhost URL.
+5. **Lint (optional)**  
+   `npm run lint`
+6. **Build for production**  
+   `npm run build`
+7. **Preview the build**  
+   `npm run preview`
+
+## 7. Deployment & Links
+- **Live Demo**: https://iridescent-chebakia-928f93.netlify.app/
+- **Repository**: https://github.com/Nayem7890/customer-support
+- **Author Profile**: https://github.com/Nayem7890
+- **GitHub API Docs** (for repo stats): https://docs.github.com/en/rest/repos/repos#get-a-repository
+
+
+

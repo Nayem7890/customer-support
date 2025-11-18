@@ -1,30 +1,41 @@
-import React from 'react';
+import React from 'react'
 
-const Navbar = () => {
-    return (
-        <div>
-            <div>
-        <div className="navbar bg-base-100 shadow-sm">
-  <div className="navbar-start">
-    
-    <a className="btn btn-ghost text-sm md:text-xl">CS — Ticket System</a>
-  </div>
-  <div className="navbar-end md:flex">
-    <ul className="menu menu-horizontal px-1 cursor-pointer">
-      <li><a>Home</a></li>
-      <li className="hidden md:block"><a>FAQ</a></li>
-      <li className="hidden md:block"><a>Changelog</a></li>
-      <li className="hidden md:block"><a>Blog</a></li>
-      <li className="hidden md:block"><a>Download</a></li>
-      <li><a>Contact</a></li>
-    </ul>
-  </div>
-  
-    <a className="btn justify-end bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white">+ New Ticket</a>
-</div>
-      </div>
+const Navbar = ({ repoUrl, stars, issues, isRepoLoading }) => {
+  const starCopy =
+    isRepoLoading || stars === null ? '--' : new Intl.NumberFormat().format(stars)
+  const issueCopy =
+    isRepoLoading || issues === null ? '--' : new Intl.NumberFormat().format(issues)
+
+  return (
+    <header className="nav-shell">
+      <div className="navbar glass-panel">
+        <div className="navbar-start gap-3">
+          <a href="#overview" className="brand-pill">
+            CS — Ticket System
+          </a>
         </div>
-    );
-};
 
-export default Navbar;
+        <div className="navbar-center hidden md:flex gap-4">
+          <span className="stat-pill">⭐ {starCopy}</span>
+          <span className="stat-pill">Issues · {issueCopy}</span>
+        </div>
+
+        <div className="navbar-end gap-3">
+          <a className="btn ghost-btn hidden sm:inline-flex" href="#tickets">
+            Live demo
+          </a>
+          <a
+            className="btn primary-btn"
+            href={repoUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View repo
+          </a>
+        </div>
+      </div>
+    </header>
+  )
+}
+
+export default Navbar
